@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Snarful Documentation Site',
-  tagline: 'Documentation Rocks',
+  title: 'Process Documentation',
+  tagline: 'Because documentation never take the day off',
   favicon: 'img/favicon.ico',
 
   markdown: {
@@ -79,7 +79,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Documentation Site',
+        title: 'Process Documentation',
         logo: {
           alt: 'My Snarful Logo',
           src: 'img/logo.svg',
@@ -89,9 +89,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Process',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Updates', position: 'left'},
           {
             href: 'https://www.snarful.com',
             label: 'Snarful',
@@ -106,25 +106,25 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Process Documentation',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Organizations',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Sacramento County',
+                href: 'https://www.saccounty.gov/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Snarful Solutions Group',
+                href: 'https://www.snarful.com',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Think Dev',
+                href: 'https://www.whythinkdev.com/',
               },
             ],
           },
@@ -136,13 +136,13 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Reddit',
+                href: 'https://www.reddit.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Snarful Documentation, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Snarful Solutions Group, LLC.`,
       },
       prism: {
         theme: prismThemes.github,
