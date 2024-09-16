@@ -22,3 +22,9 @@ snarful:
   label: snarful
   permalink: /snarful
   description: Snarful tag description
+
+welcome:
+  label: welcome
+  permalink: /welcome
+  description: Welcome tag description
+

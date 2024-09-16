@@ -8,8 +8,8 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        This site was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        This site was designed from the ground up to be easily 
+        used to get access to your documentation quickly.
       </>
     ),
   },
