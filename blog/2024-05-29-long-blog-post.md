@@ -2,7 +2,7 @@
 slug: long-blog-post
 title: Long Blog Post
 authors: williams
-tags: [hello, docusaurus]
+tags: [hello]
 ---
 
 This is the summary of a very long blog post,
