@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Process Documents',
-  tagline: 'Because documentation never take the day off',
+  tagline: 'Because documentation never takes the day off',
   favicon: 'img/favicon.ico',
 
   markdown: {
