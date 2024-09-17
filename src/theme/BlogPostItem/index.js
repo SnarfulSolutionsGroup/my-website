@@ -1,27 +1,22 @@
-import React from 'react'
-import { DiscussionEmbed } from 'disqus-react'
-import { useBlogPost } from '@docusaurus/theme-common/internal'
-import BlogPostItem from '@theme-original/BlogPostItem'
-
-export default function BlogPostItemWrapper(props) {
-  const { metadata } = useBlogPost()
-  const { frontMatter, slug, title } = metadata
-  const { comments = true } = frontMatter
-
+import React from 'react';
+import clsx from 'clsx';
+import {useBlogPost} from '@docusaurus/plugin-content-blog/client';
+import BlogPostItemContainer from '@theme/BlogPostItem/Container';
+import BlogPostItemHeader from '@theme/BlogPostItem/Header';
+import BlogPostItemContent from '@theme/BlogPostItem/Content';
+import BlogPostItemFooter from '@theme/BlogPostItem/Footer';
+// apply a bottom margin in list view
+function useContainerClassName() {
+  const {isBlogPostPage} = useBlogPost();
+  return !isBlogPostPage ? 'margin-bottom--xl' : undefined;
+}
+export default function BlogPostItem({children, className}) {
+  const containerClassName = useContainerClassName();
   return (
-    <>
-      <BlogPostItem {...props} />
-      {comments && (
-        <DiscussionEmbed
-          shortname='your-disqus-shortname'
-          config={{
-            url: slug,
-            identifier: slug,
-            title,
-            language: 'en_US',
-          }}
-        />
-      )}
-    </>
-  )
+    <BlogPostItemContainer className={clsx(containerClassName, className)}>
+      <BlogPostItemHeader />
+      <BlogPostItemContent>{children}</BlogPostItemContent>
+      <BlogPostItemFooter />
+    </BlogPostItemContainer>
+  );
 }
