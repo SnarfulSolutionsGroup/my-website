@@ -1,0 +1,54 @@
+/* src/components/MemoryGame.css */
+
+.memory-game {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 5px;
+  }
+  
+  .card-front {
+    background-color: #333;
+    color: white;
+  }
+  
+  .card-back {
+    background-color: white;
+    border: 1px solid #ddd;
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .card-front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .card-back {
+    transform: rotateY(0);
+  }
+  
